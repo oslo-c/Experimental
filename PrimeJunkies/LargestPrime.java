@@ -1,3 +1,4 @@
+package PrimeJunkies;
 import java.util.*;
 
 // This program is designed to accept a very large integer and returns the largest prime integer less than the maximum given

@@ -16,7 +16,7 @@ public class boggleBot {
 
     public static Set<String> importDictionary() throws FileNotFoundException {
         Set<String> dictionary = new HashSet<>();
-        Scanner s = new Scanner(new File("Boggle/boggleDictionary.txt"));
+        Scanner s = new Scanner(new File("/home/oslo/Workbench/CS/Experimental/Boggle/boggleDictionary.txt"));
         while (s.hasNext()) {
             dictionary.add(s.nextLine().toUpperCase());
         }
@@ -69,8 +69,10 @@ public class boggleBot {
 
     private void validateWord(String word) {
         if (dictionary.contains(word) && word.length() > 1) {
+            if (!validWords.contains(word)) {
+                System.out.print(word + " ");
+            }
             validWords.add(word);
-            System.out.print(word + " ");
         }
     }
 }
